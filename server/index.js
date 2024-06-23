@@ -147,5 +147,5 @@ app.get('/post/:id', async (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log('Server is running on https://quill-nest.vercel.app');
+  console.log('Server is running on https://quill-nest-server.vercel.app');
 });
