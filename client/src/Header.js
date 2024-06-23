@@ -5,7 +5,7 @@ import {UserContext} from "./UserContext";
 export default function Header() {
   const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
-    fetch('https://quill-nest.vercel-server.app/profile', {
+    fetch('https://quill-nest-server.vercel.app/profile', {
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
@@ -15,7 +15,7 @@ export default function Header() {
   }, []);
 
   function logout() {
-    fetch('https://quill-nest.vercel-server.app/logout', {
+    fetch('https://quill-nest-server.vercel.app/logout', {
       credentials: 'include',
       method: 'POST',
     });
