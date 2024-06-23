@@ -14,7 +14,7 @@ const fs = require('fs');
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 
-app.use(cors({ credentials: true, origin: 'https://quill-nest.vercel.app', methods:["POST", "GET"] }));
+app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
@@ -147,5 +147,5 @@ app.get('/post/:id', async (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log('Server is running on https://quill-nest-server.vercel.app');
+  console.log('Server is running on http://localhost:4000');
 });
