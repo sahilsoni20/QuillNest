@@ -9,7 +9,7 @@ export default function LoginPage() {
   const {setUserInfo} = useContext(UserContext);
   async function login(ev) {
     ev.preventDefault();
-    const response = await fetch('https://quill-nest.vercel.app/login', {
+    const response = await fetch('https://quill-nest.vercel-server.app/login', {
       method: 'POST',
       body: JSON.stringify({username, password}),
       headers: {'Content-Type':'application/json'},
